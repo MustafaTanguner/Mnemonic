@@ -13,9 +13,15 @@ Because the values of each picture will be different.so when decryption you shou
 
 Note:Use an image higher than 72 dpi Otherwise it won't work ...
 
-https://www.youtube.com/embed/pBSR3DyobIY
+https://www.youtube.com/watch?v=pBSR3DyobIY
 
 ## Required modules
 pip install opencv-python
 #
 
+![](image/1.jpg)
+#I entered the path to the picture.
+![](image/2.jpg)
+![](image/3.jpg)
+# if you make changes to the picture. access code also changed
+![](image/4.jpg)
