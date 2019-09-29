@@ -18,6 +18,7 @@ https://www.youtube.com/watch?v=pBSR3DyobIY
 ## Required modules
 pip install opencv-python
 #
+![](image/encode.jpg)
 
 ![](image/1.jpg)
 #I entered the path to the picture.
@@ -25,3 +26,6 @@ pip install opencv-python
 ![](image/3.jpg)
 # if you make changes to the picture. access code also changed
 ![](image/4.jpg)
+
+![](image/encode.jpg)
+![](image/son3.jpg)
