@@ -23,8 +23,6 @@ print("*" * 105)
 
 print("*" * 105, )
 print("*" * 30, "https://www.youtube.com/watch?v=pBSR3DyobIY", "*" * 30, )
-print("_" * 105, )
-print("*" * 38, "Author : Musatafa Tangüner", "*" * 39, )
 
 print("-" * 105, )
 print("")
