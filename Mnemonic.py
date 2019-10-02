@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 import cv2
 import random
 import math
@@ -19,7 +21,7 @@ o8o        o888o o888o o888o `Y8bod8P' o888o o888o o888o `Y8bod8P' o888o o888o o
 print("*" * 30, "Mnemonic Şifreleme Yazılımına Hoş Geldiniz.", "*" * 30, )
 print("*" * 31,"Welcome to Mnemonic Encryption Software", "*" * 33, )
 print("*" * 105)
-print("*" * 31,"*********Author:Mustafa Tangüner*********", "*" * 33, )
+print("*" * 31,"*********Author:Mustafa Tangüner*******", "*" * 33, )
 print("*" * 105, )
 print("*" * 30, "https://www.youtube.com/watch?v=pBSR3DyobIY", "*" * 30, )
 
