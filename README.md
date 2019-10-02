@@ -16,7 +16,13 @@ Note:Use an image higher than 72 dpi Otherwise it won't work ...
 https://www.youtube.com/watch?v=pBSR3DyobIY
 
 ## Required modules
-pip install opencv-python
+apt-get install python3
+#
+apt-get install python3-pip
+#
+pip3 install opencv-python
+#
+python3 Mnemonic.py
 #
 ![](image/encode.jpg)
 
