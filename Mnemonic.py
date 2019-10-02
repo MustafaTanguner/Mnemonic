@@ -149,7 +149,7 @@ def sifrele():
     
 
 
-    text = str(input("Text/Lütfen Şifrelenecek Metini Giriniz:"))
+    text = str(input("Text/Lütfen Şifrelenecek Metni Giriniz:"))
     text = text.lower()
     letters = [c for c in text]
     sifre = []
