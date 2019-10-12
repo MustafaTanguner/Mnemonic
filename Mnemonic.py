@@ -6,6 +6,7 @@ import math
 import sys
 import os
 import os.path
+from sozlukler import sifreleme_sozlugu, sifre_cozme_sozlugu
 
 print("""
 
@@ -144,190 +145,21 @@ def sifrele():
     if x == x:
         key = [(x // (10 ** i)) % 10 for i in range(math.ceil(math.log(x, 10)) - 1, -1, -1)]
     toplam = 0
-    for i in key:
-        toplam = toplam + i
+    for letter in key:
+        toplam = toplam + letter
 
     text = str(input("Text/Lütfen Şifrelenecek Metni Giriniz:"))
     text = text.lower()
     letters = [c for c in text]
     sifre = []
-    for i in letters:
-        if i == "a":
-            i = 16
-            sifre.append(i)
-        elif i == "b":
-            i = 52
-            sifre.append(i)
-        elif i == "c":
-            i = 23
-            sifre.append(i)
-        elif i == "ç":
-            i = 56
-            sifre.append(i)
-        elif i == "d":
-            i = 65
-            sifre.append(i)
-        elif i == "e":
-            i = 34
-            sifre.append(i)
-        elif i == "f":
-            i = 21
-            sifre.append(i)
-        elif i == "g":
-            i = 87
-            sifre.append(i)
-        elif i == "ğ":
-            i = 8774
-            sifre.append(i)
-        elif i == "h":
-            i = 44
-            sifre.append(i)
-        elif i == "ı":
-            i = 64
-            sifre.append(i)
-        elif i == "i":
-            i = 73
-            sifre.append(i)
-        elif i == "j":
-            i = 312
-            sifre.append(i)
-        elif i == "k":
-            i = 98
-            sifre.append(i)
-        elif i == "l":
-            i = 12
-            sifre.append(i)
-        elif i == "m":
-            i = 13
-            sifre.append(i)
-        elif i == "n":
-            i = 45
-            sifre.append(i)
-        elif i == "o":
-            i = 399
-            sifre.append(i)
-        elif i == "ö":
-            i = 541
-            sifre.append(i)
-        elif i == "p":
-            i = 232
-            sifre.append(i)
-        elif i == "r":
-            i = 421
-            sifre.append(i)
-        elif i == "s":
-            i = 38
-            sifre.append(i)
-        elif i == "ş":
-            i = 19
-            sifre.append(i)
-        elif i == "t":
-            i = 17
-            sifre.append(i)
-        elif i == "u":
-            i = 671
-            sifre.append(i)
-        elif i == "ü":
-            i = 231
-            sifre.append(i)
-        elif i == "v":
-            i = 287
-            sifre.append(i)
-        elif i == "y":
-            i = 743
-            sifre.append(i)
-        elif i == "q":
-            i = 7433
-            sifre.append(i)
-        elif i == "z":
-            i = 634
-            sifre.append(i)
-        elif i == "w":
-            i = 785
-            sifre.append(i)
-        elif i == "x":
-            i = 585
-            sifre.append(i)
-        elif i == "1":
-            i = 693
-            sifre.append(i)
-        elif i == "2":
-            i = 478
-            sifre.append(i)
-        elif i == "3":
-            i = 884
-            sifre.append(i)
-        elif i == "4":
-            i = 284
-            sifre.append(i)
-        elif i == "5":
-            i = 25
-            sifre.append(i)
-        elif i == "6":
-            i = 49
-            sifre.append(i)
-        elif i == "7":
-            i = 405
-            sifre.append(i)
-        elif i == "8":
-            i = 161
-            sifre.append(i)
-        elif i == "9":
-            i = 11
-            sifre.append(i)
-        elif i == "10":
-            i = 154
-            sifre.append(i)
-        elif i == "0":
-            i = 224
-            sifre.append(i)
-        elif i == "(":
-            i = 2311
-            sifre.append(i)
-        elif i == ")":
-            i = 22
-            sifre.append(i)
-        elif i == ".":
-            i = 41
-            sifre.append(i)
-        elif i == "=":
-            i = 55
-            sifre.append(i)
-        elif i == "/":
-            i = 440
-            sifre.append(i)
-        elif i == "\ ":
-            i = 4401
-            sifre.append(i)
-        elif i == "-":
-            i = 33
-            sifre.append(i)
-        elif i == ":":
-            i = 22
-            sifre.append(i)
-        elif i == ";":
-            i = 11
-            sifre.append(i)
-        elif i == ",":
-            i = 5
-            sifre.append(i)
-        elif i == " ":
-            i = 51122
-            sifre.append(i)
-        elif i == "?":
-            i = 5224
-            sifre.append(i)
-        elif i == "!":
-            i = 533
-            sifre.append(i)
-        elif i == "_":
-            i = 5331
-            sifre.append(i)
+    for letter in letters:
+        letter_as_num = sifreleme_sozlugu[letter]
+        sifre.append(letter_as_num)
 
     tamkilit = []
-    for i in sifre:
-        i = i * toplam
-        tamkilit.append(i)
+    for letter in sifre:
+        letter = letter * toplam
+        tamkilit.append(letter)
     x = str(random.randrange(1, 10000))
     print("\n\nFile Name\Dosyanızın ADI: " + x + ".txt'dir.\n\n")
 
@@ -411,177 +243,8 @@ def coz():
     COz2 = []
 
     for i in Coz1:
-        if i == 16:
-            i = "a"
-            COz2.append(i)
-        if i == 52:
-            i = "b"
-            COz2.append(i)
-        if i == 23:
-            i = "c"
-            COz2.append(i)
-        if i == 56:
-            i = "ç"
-            COz2.append(i)
-        if i == 65:
-            i = "d"
-            COz2.append(i)
-        if i == 34:
-            i = "e"
-            COz2.append(i)
-        if i == 21:
-            i = "f"
-            COz2.append(i)
-        if i == 87:
-            i = "g"
-            COz2.append(i)
-        if i == 8774:
-            i = "ğ"
-            COz2.append(i)
-        if i == 44:
-            i = "h"
-            COz2.append(i)
-        elif i == 64:
-            i = "ı"
-            COz2.append(i)
-        elif i == 73:
-            i = "i"
-            COz2.append(i)
-        elif i == 312:
-            i = "j"
-            COz2.append(i)
-        elif i == 98:
-            i = "k"
-            COz2.append(i)
-        elif i == 12:
-            i = "l"
-            COz2.append(i)
-        elif i == 13:
-            i = "m"
-            COz2.append(i)
-        elif i == 45:
-            i = "n"
-            COz2.append(i)
-        elif i == 399:
-            i = "o"
-            COz2.append(i)
-        elif i == 541:
-            i = "ö"
-            COz2.append(i)
-        elif i == 232:
-            i = "p"
-            COz2.append(i)
-        elif i == 421:
-            i = "r"
-            COz2.append(i)
-        elif i == 38:
-            i = "s"
-            COz2.append(i)
-        elif i == 19:
-            i = "ş"
-            COz2.append(i)
-        elif i == 17:
-            i = "t"
-            COz2.append(i)
-        elif i == 671:
-            i = "u"
-            COz2.append(i)
-        elif i == 231:
-            i = "ü"
-            COz2.append(i)
-        elif i == 287:
-            i = "v"
-            COz2.append(i)
-        elif i == 743:
-            i = "y"
-            COz2.append(i)
-        elif i == 7433:
-            i = "q"
-            COz2.append(i)
-        elif i == 634:
-            i = "z"
-            COz2.append(i)
-        elif i == 785:
-            i = "w"
-            COz2.append(i)
-        elif i == 585:
-            i = "x"
-            COz2.append(i)
-        elif i == 693:
-            i = "1"
-            COz2.append(i)
-        elif i == 478:
-            i = "2"
-            COz2.append(i)
-        elif i == 884:
-            i = "3"
-            COz2.append(i)
-        elif i == 284:
-            i = "4"
-            COz2.append(i)
-        elif i == 25:
-            i = "5"
-            COz2.append(i)
-        elif i == 49:
-            i = "6"
-            COz2.append(i)
-        elif i == 405:
-            i = "7"
-            COz2.append(i)
-        elif i == 161:
-            i = "8"
-            COz2.append(i)
-        elif i == 11:
-            i = "9"
-            COz2.append(i)
-        elif i == 154:
-            i = "10"
-            COz2.append(i)
-        elif i == 224:
-            i = "0"
-            COz2.append(i)
-        elif i == 2311:
-            i = "("
-            COz2.append(i)
-        elif i == 22:
-            i = ")"
-            COz2.append(i)
-        elif i == 41:
-            i = "."
-            COz2.append(i)
-        elif i == 55:
-            i = "="
-            COz2.append(i)
-        elif i == 440:
-            i = "/"
-            COz2.append(i)
-        elif i == 4401:
-            i = "\ "
-            COz2.append(i)
-        elif i == 33:
-            i = "-"
-            COz2.append(i)
-        elif i == 22:
-            i = ":"
-            COz2.append(i)
-        elif i == 11:
-            i = ";"
-            COz2.append(i)
-        elif i == 5:
-            i = ","
-            COz2.append(i)
-        elif i == 51122:
-            i = " "
-            COz2.append(i)
-        elif i == 5224:
-            i = "?"
-            COz2.append(i)
-        elif i == 533:
-            i = "!"
-            COz2.append(i)
-        elif i == 5331:
-            i = "_"
-            COz2.append(i)
+        letter_as_str = sifre_cozme_sozlugu[i]
+        COz2.append(letter_as_str)
 
     cozum = "".join(COz2)
 
