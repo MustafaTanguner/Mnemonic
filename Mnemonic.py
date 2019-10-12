@@ -19,9 +19,9 @@ o8o        o888o o888o o888o `Y8bod8P' o888o o888o o888o `Y8bod8P' o888o o888o o
 
 """)
 print("*" * 30, "Mnemonic Şifreleme Yazılımına Hoş Geldiniz.", "*" * 30, )
-print("*" * 31,"Welcome to Mnemonic Encryption Software", "*" * 33, )
+print("*" * 31, "Welcome to Mnemonic Encryption Software", "*" * 33, )
 print("*" * 105)
-print("*" * 31,"*********Author:Mustafa Tangüner*******", "*" * 33, )
+print("*" * 31, "*********Author:Mustafa Tangüner*******", "*" * 33, )
 print("*" * 105, )
 print("*" * 30, "https://www.youtube.com/watch?v=pBSR3DyobIY", "*" * 30, )
 
@@ -33,13 +33,14 @@ while True:
     gelen = input("Access Code image file Path/Lütfen resim yolunu belirtiniz:")
     if os.path.isfile(gelen) and os.access(gelen, os.R_OK):
         print("Dosya var ve okunabilir")
-        print ("File exists and is readable")
+        print("File exists and is readable")
         break
     else:
-        print ("Either the file is missing or not readable")
+        print("Either the file is missing or not readable")
         print("Hatalı yada okunamıyor lütfen tekrar deneyiniz.")
-def encode():
 
+
+def encode():
     resim = cv2.imread(gelen)
     b = resim[100, 100, 0]
     g = resim[100, 100, 1]
@@ -56,7 +57,6 @@ def encode():
     px[2] = 226
 
     d = resim[9, :, 0], resim[9, :, 1], resim[9, :, 2]
-
 
     with open('veriler.txt', 'w') as f:
         f.write(str(d))
@@ -77,55 +77,55 @@ def semboleritemizle(veriler):
         if (len(t) > -1):
             sembolsuzsayilar.append(t)
     return sembolsuzsayilar
-with open("pixel.txt" , "w")as f:
-        for item in semboleritemizle(veriler):
-            f.write("%s" % item)
+
+
+with open("pixel.txt", "w")as f:
+    for item in semboleritemizle(veriler):
+        f.write("%s" % item)
 
 with open('pixel.txt', 'r')as f:
-        sayilar = []
-        Kindi = f.read()
-        Kindi = Kindi.lstrip()
-        Kindi = Kindi.replace(" ", "")
+    sayilar = []
+    Kindi = f.read()
+    Kindi = Kindi.lstrip()
+    Kindi = Kindi.replace(" ", "")
 
-        q = (len(Kindi) -100)
-        w = (len(Kindi) -500)
-        e = (len(Kindi) -50)
-        r = (len(Kindi) -86)
-        f = (len(Kindi) -15)
-        t = (len(Kindi) -22)
-        y = (len(Kindi) -55)
-        u = (len(Kindi) -12)
-        o = (len(Kindi) -155)
-        p = (len(Kindi) -123)
-        a = (len(Kindi) -55)
-        s = (len(Kindi) -58)
-        d = (len(Kindi) -99)
-        n = (len(Kindi) -66)
-        g = (len(Kindi) -77)
-        h = (len(Kindi) -11)
-        j = (len(Kindi) -22)
-        k = (len(Kindi) -7)
-        l = (len(Kindi) -42)
-        z = (len(Kindi) -66)
-        x = (len(Kindi) -112)
-        c = (len(Kindi) -33)
-        v = (len(Kindi) -47)
-        b = (len(Kindi) -18)
-        i = (len(Kindi) -29)
-        m = (len(Kindi) -59)
+    q = (len(Kindi) - 100)
+    w = (len(Kindi) - 500)
+    e = (len(Kindi) - 50)
+    r = (len(Kindi) - 86)
+    f = (len(Kindi) - 15)
+    t = (len(Kindi) - 22)
+    y = (len(Kindi) - 55)
+    u = (len(Kindi) - 12)
+    o = (len(Kindi) - 155)
+    p = (len(Kindi) - 123)
+    a = (len(Kindi) - 55)
+    s = (len(Kindi) - 58)
+    d = (len(Kindi) - 99)
+    n = (len(Kindi) - 66)
+    g = (len(Kindi) - 77)
+    h = (len(Kindi) - 11)
+    j = (len(Kindi) - 22)
+    k = (len(Kindi) - 7)
+    l = (len(Kindi) - 42)
+    z = (len(Kindi) - 66)
+    x = (len(Kindi) - 112)
+    c = (len(Kindi) - 33)
+    v = (len(Kindi) - 47)
+    b = (len(Kindi) - 18)
+    i = (len(Kindi) - 29)
+    m = (len(Kindi) - 59)
 
-        tan = (q*w*e*r*t*y*u*o*p*a*s*d*n*g*h*j*k*l*z*x*c*v*b*m*i)*(math.factorial(1111))*(math.factorial(999))
-        sayilar.append(tan)
+    tan = (q * w * e * r * t * y * u * o * p * a * s * d * n * g * h * j * k * l * z * x * c * v * b * m * i) * (
+        math.factorial(1111)) * (math.factorial(999))
+    sayilar.append(tan)
 
-
-for kelime in  sayilar:
-
-
+for kelime in sayilar:
 
     x = str(random.randrange(0, 1))
     print("\n\nProcessing:\İŞLEM DEVAM EDİYOR LÜTFEN BEKLEYİNİZI: " + x + ".txt'dir.\n\n")
-    print("*" *15, "İŞLEM TAMAMLANDI", "*" *15)
-    print("*" *15, "PROCESS COMPLETED", "*" *15)
+    print("*" * 15, "İŞLEM TAMAMLANDI", "*" * 15)
+    print("*" * 15, "PROCESS COMPLETED", "*" * 15)
 
     with open("%s.txt" % x, "w")as f:
         for item in sayilar:
@@ -146,8 +146,6 @@ def sifrele():
     toplam = 0
     for i in key:
         toplam = toplam + i
-    
-
 
     text = str(input("Text/Lütfen Şifrelenecek Metni Giriniz:"))
     text = text.lower()
@@ -341,8 +339,6 @@ def sifrele():
     print("Your file has been successfully saved.")
     print(tamkilit)
 
-   
-
 
 def coz():
     with open('0.txt', 'r')as f:
@@ -384,7 +380,7 @@ def coz():
             coz()
 
         if Tamkilit[0] == "[":
-            Tamkilit = Tamkilit[1:len(Tamkilit) -1]
+            Tamkilit = Tamkilit[1:len(Tamkilit) - 1]
 
         else:
             Coz = Tamkilit.split(",")
@@ -393,8 +389,6 @@ def coz():
 
     for i in Coz:
         Coz0.append(int(i))
-
-
 
     key = [(x123 // (10 ** i)) % 10 for i in range(math.ceil(math.log(x123, 10)) - 1, -1, -1)]
     toplam = 0
@@ -411,7 +405,7 @@ def coz():
         else:
             print(
                 "WRONG KEY OR ERROR PASSWORD:key entered by message does not match\n\YANLIS ANAHATAR VEYA HATALI SIFRALI MESAJ GIRILDI:nMesaj ile Girilen Anahtar Uyusmuyor Lütfen Terkrar Deneyiniz.\n")
-            
+
             coz()
 
     COz2 = []
@@ -599,8 +593,7 @@ Devam = 'E'
 while Devam == "E" or Devam == "e":
     print("#" * 60)
     print("LÜTFEN YAPMAK İSTEDİĞİNİZ İŞLEMİ SEÇİNİZ \n\n(1) ENCRYPT/SIFRELEME (2) DECRYPT/SIFRE COZME")
-   
-    
+
     secim = input(">>>>")
 
     if secim == '1':
@@ -611,9 +604,3 @@ while Devam == "E" or Devam == "e":
     print(" ")
     print(" ")
     Devam = input("PRESS TO QUİT 'ENTER' OR 'E' PRESS TO CONTİNUE./ÇIKMAK İÇİN 'ENTER' DEVAM ETMEK İÇİN 'E' BASINIZ.")
-    
-
-
-
-
-
