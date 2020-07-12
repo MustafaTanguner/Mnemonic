@@ -42,12 +42,9 @@ python3 Mnemonic.py
 #
 ![](image/encode.jpg)
 
-![](image/1.jpg)
+![](image/1.png)
 #I entered the path to the picture.
-![](image/2.jpg)
-![](image/3.jpg)
-# if you make changes to the picture. access code also changed
-![](image/4.jpg)
+![](image/2.png)
+![](image/3.png)
+![](image/4.png)
 
-![](image/encode.jpg)
-![](image/son3.jpg)
