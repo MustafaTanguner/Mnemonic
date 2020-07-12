@@ -25,6 +25,15 @@ apt-get install python3
 apt-get install python3-pip
 ```
 
+- termcolor for Python3
+```bash
+pip3 install termcolor
+```
+- colored for Python3
+```bash
+pip3 install colored
+```
+
 - OpenCV for Python
 ```bash
 pip3 install opencv-python
