@@ -16,10 +16,6 @@ Note:Use an image higher than 72 dpi Otherwise it won't work ...
 https://www.youtube.com/watch?v=pBSR3DyobIY
 
 ## Required modules
-- Python3
-```bash
-apt-get install python3
-```
 - pip for Python3
 ```bash
 apt-get install python3-pip
@@ -33,7 +29,6 @@ pip3 install termcolor
 ```bash
 pip3 install colored
 ```
-
 - OpenCV for Python
 ```bash
 pip3 install opencv-python
