@@ -6,9 +6,11 @@ import math
 import sys
 import os
 import os.path
+from termcolor import colored
 from sozlukler import sifreleme_sozlugu, sifre_cozme_sozlugu
 
-print("""
+
+print(colored("""
 
 ooo        ooooo                                                                o8o            
 `88.       .888'                                                                `"'            
@@ -18,11 +20,10 @@ ooo        ooooo                                                                
  8    Y     888   888   888  888    .o  888   888   888  888   888  888   888   888  888   .o8 
 o8o        o888o o888o o888o `Y8bod8P' o888o o888o o888o `Y8bod8P' o888o o888o o888o `Y8bod8P' 
 
-""")
-print("*" * 30, "Mnemonic Şifreleme Yazılımına Hoş Geldiniz.", "*" * 30, )
-print("*" * 31, "Welcome to Mnemonic Encryption Software", "*" * 33, )
+""",'blue'))
+print("*" * 31, "Welcome to Mnemonic Encryption Software",  "*" * 33,)
 print("*" * 105)
-print("*" * 31, "*********Author:Mustafa Tangüner*******", "*" * 33, )
+print("*" * 41,"Author:@villwocki", "*" * 45, )
 print("*" * 105, )
 print("*" * 30, "https://www.youtube.com/watch?v=pBSR3DyobIY", "*" * 30, )
 
@@ -31,14 +32,13 @@ print("")
 print("")
 
 while True:
-    gelen = input("Access Code image file Path/Lütfen resim yolunu belirtiniz:")
+    gelen = input(colored("Access Code image file Path:",'cyan'))
     if os.path.isfile(gelen) and os.access(gelen, os.R_OK):
-        print("Dosya var ve okunabilir")
         print("File exists and is readable")
         break
     else:
         print("Either the file is missing or not readable")
-        print("Hatalı yada okunamıyor lütfen tekrar deneyiniz.")
+
 
 
 def encode():
@@ -124,17 +124,15 @@ with open('pixel.txt', 'r')as f:
 for kelime in sayilar:
 
     x = str(random.randrange(0, 1))
-    print("\n\nProcessing:\İŞLEM DEVAM EDİYOR LÜTFEN BEKLEYİNİZI: " + x + ".txt'dir.\n\n")
-    print("*" * 15, "İŞLEM TAMAMLANDI", "*" * 15)
+    print("\n\nProcessing:" + x + ".txt'dir.\n\n")
     print("*" * 15, "PROCESS COMPLETED", "*" * 15)
 
     with open("%s.txt" % x, "w")as f:
         for item in sayilar:
             f.write("%s" % item)
 
-print("Resim Analizi Başaralı Bir Şekilde Tamamlandı. Özel Kodunuz:",
-      "\nImage Analysis Completed Successfully. Your Special Code:")
-print(sayilar)
+print(colored("Image Analysis Completed Successfully. Your Special Code:",'green'))
+print(colored(sayilar,'red'))
 
 
 def sifrele():
@@ -148,7 +146,7 @@ def sifrele():
     for letter in key:
         toplam = toplam + letter
 
-    text = str(input("Text/Lütfen Şifrelenecek Metni Giriniz:"))
+    text = str(input("\n\nText:"))
     text = text.lower()
     letters = [c for c in text]
     sifre = []
@@ -161,15 +159,15 @@ def sifrele():
         letter = letter * toplam
         tamkilit.append(letter)
     x = str(random.randrange(1, 10000))
-    print("\n\nFile Name\Dosyanızın ADI: " + x + ".txt'dir.\n\n")
+    print(colored("\n\nFile Name: " + x + ".txt'dir.\n\n",'blue'))
 
     with open("%s.txt" % x, "w")as f:
         for item in tamkilit:
             f.write("%s\n" % item)
     s = open("%s.txt" % x, "r")
-    print("ENCRYPTION MESSAGE\ŞİFRELENMİŞ MESAJ:")
-    print("Your file has been successfully saved.")
-    print(tamkilit)
+    print(colored("ENCRYPTION MESSAGE:",'green'))
+    print(colored("Your file has been successfully saved.",'green'))
+    print(colored(tamkilit,'red'))
 
 
 def coz():
@@ -178,37 +176,35 @@ def coz():
         f_conte = f_conte.lstrip()
         f_conte = f_conte.replace(" ", "")
         x123 = int(f_conte)
-    print("Lütfen çözülcek metini giriniz dosya olarak girmek İçin '1' 'E Ctrl + V için '2' Basınız:")
-    print("Please enter the ENCRYPT message to file Path '1' ' or Ctrl + V '2' Press:")
+    print(colored("Please enter the ENCRYPT message to file Path '1' ' or Ctrl + V '2' Press:",'green'))
     Metingiris = int(input(">>>>"))
     if Metingiris == 1 or Metingiris == 2:
         pass
 
     else:
-        print("Feil input/Hatalı Giriş Tekrar Deneyiniz.")
+        print("Feil input")
         coz()
 
     if Metingiris == 1:
         Tamkilit = []
         try:
-            with open(input("Please enter the file Path\Dosya Adını Uzantısıyla giriniz:"), "r") as f:
+            with open(input("\nPlease enter the file Path:"), "r") as f:
                 for line in f:
                     Tamkilit.append(line.strip())
         except:
-            print("Not Found File\Dosya Bulunamadı...")
+            print(colored("Not Found File:",'red'))
             coz()
 
         Coz = []
         for i in Tamkilit:
             Coz.append(int(i))
     if Metingiris == 2:
-        Tamkilit = input("Please enter the text to be solved \Lütfen çözülecek metni giriniz:")
+        Tamkilit = input(colored("Please enter the text to be solved:",'green'))
 
         if Tamkilit.isdigit():
             pass
         else:
-            print("Hatali Metin Girildi.Şifreli Metin Harf İçeremez.\nLütfen Tekrar Giriniz.")
-            print("Incorrect Text Entered Encrypted text cannot contain letters.Please enter again:")
+            print(colored("Incorrect Text Entered Encrypted text cannot contain letters.Please enter again:",'red'))
             coz()
 
         if Tamkilit[0] == "[":
@@ -235,8 +231,7 @@ def coz():
             i = i / toplam
             Coz1.append(i)
         else:
-            print(
-                "WRONG KEY OR ERROR PASSWORD:key entered by message does not match\n\YANLIS ANAHATAR VEYA HATALI SIFRALI MESAJ GIRILDI:nMesaj ile Girilen Anahtar Uyusmuyor Lütfen Terkrar Deneyiniz.\n")
+            print(colored("WRONG KEY OR ERROR PASSWORD:key entered by message does not match:",'red'))
 
             coz()
 
@@ -247,17 +242,18 @@ def coz():
         COz2.append(letter_as_str)
 
     cozum = "".join(COz2)
-
-    print(">" * 15, cozum, "<" * 15)
+    print(" ")
+    print(" ")
+    print(" ")
+    print(colored(cozum,'green'))
 
 
 Devam = 'E'
 
 while Devam == "E" or Devam == "e":
-    print("#" * 60)
-    print("LÜTFEN YAPMAK İSTEDİĞİNİZ İŞLEMİ SEÇİNİZ \n\n(1) ENCRYPT/SIFRELEME (2) DECRYPT/SIFRE COZME")
+    print(colored("\n\n(1) ENCRYPT (2) DECRYPT",'green'))
 
-    secim = input(">>>>")
+    secim = input("\n>>>>")
 
     if secim == '1':
         sifrele()
@@ -266,4 +262,4 @@ while Devam == "E" or Devam == "e":
 
     print(" ")
     print(" ")
-    Devam = input("PRESS TO QUİT 'ENTER' OR 'E' PRESS TO CONTİNUE./ÇIKMAK İÇİN 'ENTER' DEVAM ETMEK İÇİN 'E' BASINIZ.")
+    Devam = input(colored("PRESS TO QUİT 'ENTER' OR 'E' PRESS TO CONTİNUE.",'blue'))
