@@ -39,8 +39,8 @@ to run project:
 ```bash
 python3 Mnemonic.py
 ```
-#
-![](image/encode.jpg)
+
+
 
 ![](image/1.png)
 #I entered the path to the picture.
