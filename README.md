@@ -20,11 +20,6 @@ https://www.youtube.com/watch?v=pBSR3DyobIY
 ```bash
 apt-get install python3-pip
 ```
-
-- termcolor for Python3
-```bash
-pip3 install termcolor
-```
 - colored for Python3
 ```bash
 pip3 install colored
