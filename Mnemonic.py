@@ -176,9 +176,9 @@ def coz():
         f_conte = f_conte.lstrip()
         f_conte = f_conte.replace(" ", "")
         x123 = int(f_conte)
-    print(colored("Please enter the ENCRYPT message to file Path '1' ' or Ctrl + V '2' Press:",'green'))
-    Metingiris = int(input(">>>>"))
-    if Metingiris == 1 or Metingiris == 2:
+    print(colored("ENCRYPT Message to file Path'",'green'))
+    Metingiris = 1
+    if Metingiris == 1:
         pass
 
     else:
