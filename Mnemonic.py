@@ -129,6 +129,7 @@ for kelime in sayilar:
 
     with open("%s.txt" % x, "w")as f:
         for item in sayilar:
+            sys.set_int_max_str_digits(6000)
             f.write("%s" % item)
 
 print(colored("Image Analysis Completed Successfully. Your Special Code:",'green'))
